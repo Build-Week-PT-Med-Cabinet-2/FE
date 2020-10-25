@@ -3,12 +3,10 @@ import './App.css';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom"
 import { useHistory,useParams } from "react-router";
 import "./styles.css";
-//import axiosWithAuth from './utils/axiosWithAuth';
 import {axiosWithAuth} from './utils/axiosWithAuth';
-import axios from 'axios'
 import { connect } from 'react-redux'
 //component imports
-// import HomePage from "./components/HomePage"
+import HomePage from "./components/HomePage"
 import Saved from './components/Saved';
 import Suggestions from './components/Suggestions'
 import Login from './components/Login';
