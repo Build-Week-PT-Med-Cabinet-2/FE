@@ -137,9 +137,9 @@ const toggle = () => setIsOpen(!isOpen);
     <Container className = "p-0" fluid={true} >
         <Switch>
         <Route exact path= "/">
-            <HomePage />
+            <Home />
           </Route>
-          <PrivateRoute exact path= "/nav" component= {Home} />
+          <PrivateRoute exact path= "/nav" component= {HomePage} />
 
           <Route exact path= "/nav-saved">
             <Saved />

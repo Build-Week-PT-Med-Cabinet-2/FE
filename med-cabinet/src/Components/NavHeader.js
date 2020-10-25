@@ -23,7 +23,7 @@ const toggle = () => setIsOpen(!isOpen);
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-            <Link className = "nav-link font-weight-bolder" to = "/nav">Home</Link>
+            <Link className = "nav-link font-weight-bolder" to = "/">Home</Link>
             </NavItem>
             <NavItem>
             <Link className = "nav-link font-weight-bolder" to = "/nav-saved">saved</Link>
