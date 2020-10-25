@@ -139,7 +139,7 @@ const toggle = () => setIsOpen(!isOpen);
         <Route exact path= "/">
             <Home />
           </Route>
-          <PrivateRoute exact path= "/nav" component= {HomePage} />
+          <Route exact path= "/nav" component= {HomePage} />
 
           <Route exact path= "/nav-saved">
             <Saved />
