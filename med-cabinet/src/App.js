@@ -8,7 +8,7 @@ import {axiosWithAuth} from './utils/axiosWithAuth';
 import axios from 'axios'
 import { connect } from 'react-redux'
 //component imports
-import HomePage from './components/HomePage';
+import HomePage from './components/HomeP';
 import Saved from './components/Saved';
 import Suggestions from './components/Suggestions'
 import Login from './components/Login';
