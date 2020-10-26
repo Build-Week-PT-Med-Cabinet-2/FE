@@ -40,7 +40,7 @@ const toggle = () => setIsOpen(!isOpen);
         })
     }
     const makePush = () => {
-      return history.push('/nav')
+      return history.push('/nav-suggestions')
     }
     const handleSubmit = e => {
         e.preventDefault();
@@ -57,7 +57,7 @@ const toggle = () => setIsOpen(!isOpen);
 useEffect(() => {
   console.log("ahhh")
   if(isClicked===false){
-    history.push('/nav')
+    history.push('/nav-suggestions')
   }
   else{
     console.log(null);
@@ -65,8 +65,25 @@ useEffect(() => {
 }, [isClicked] );
     return (
       <>
+         <Container className = "p-0" fluid={true} >
+          <Navbar style={{opacity: ".8"}}  color="light"  light expand="md">
+            <NavbarToggler onClick={toggle} />
+           
+            <Collapse isOpen={isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+
+                <NavItem>
+                  <Link style={{color:"black", fontSize: "2rem"}} className = "nav-link" to = "/signup">Sign-up</Link>
+                </NavItem>
+
+              </Nav>
+
+            </Collapse>
+
+          </Navbar>
+        </Container>
       
-          <h2>Sign In</h2>
+          <h2 style={{paddingTop:"20px"}}>Log In</h2>
           <Form className="form" onSubmit={handleSubmit} >
             <Col>
               <FormGroup>

@@ -44,6 +44,8 @@ function App(props) {
   const [dummy,setDummy] = useState({
     strain:"Citrus-Punch"
   });
+  
+
 
   const history = useHistory();
 
@@ -137,15 +139,17 @@ const toggle = () => setIsOpen(!isOpen);
         <Route exact path= "/">
             <Home />
           </Route>
-          <PrivateRoute exact path= "/nav" component= {HomePage} />
+          <PrivateRoute exact path= "/nav-suggestions">
+            <Suggestions addToSavedList={addToSavedList} />
+          </PrivateRoute>
 
           <Route exact path= "/nav-saved">
             <Saved />
           </Route>
 
-          <Route exact path= "/nav-suggestions">
+          {/* <Route exact path= "/nav-suggestions">
             <Suggestions addToSavedList = {addToSavedList} />
-          </Route>
+          </Route> */}
 
           <Route exact path= "/login">
             <Login />
