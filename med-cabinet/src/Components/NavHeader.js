@@ -17,19 +17,19 @@ const [isOpen, setIsOpen] = useState(false);
 const toggle = () => setIsOpen(!isOpen);
     return(
         <Container className = "p-0" fluid={true} >
-      <Navbar className = "border-bottom p-4" color="light" light expand="md">
-        <NavbarBrand href="/">Med-Cabinet</NavbarBrand>
+      <Navbar style={{opacity: ".8"}}  color="light"  light expand="md">
+        {/* <NavbarBrand href="/">Med-Cabinet</NavbarBrand> */}
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-            <Link className = "nav-link font-weight-bolder" to = "/nav">Home</Link>
+            <Link style={{color:"black", fontSize: "1.5rem"}} className = "nav-link"  to = "/">Home |</Link>
             </NavItem>
             <NavItem>
-            <Link className = "nav-link font-weight-bolder" to = "/nav-saved">saved</Link>
+            <Link style={{color:"black", fontSize: "1.5rem"}} className = "nav-link"  to = "/nav-saved">View Saved Strains |</Link>
             </NavItem>
             <NavItem>
-            <Link className = "nav-link font-weight-bolder" to = "/nav-suggestions">suggestions</Link>
+            <Link style={{color:"black", fontSize: "1.5rem"}} className = "nav-link"  to = "/nav-suggestions">Recommendations</Link>
             </NavItem>
             </Nav>
           </Collapse>

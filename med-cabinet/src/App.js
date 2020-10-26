@@ -3,24 +3,22 @@ import './App.css';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom"
 import { useHistory,useParams } from "react-router";
 import "./styles.css";
-//import axiosWithAuth from './utils/axiosWithAuth';
 import {axiosWithAuth} from './utils/axiosWithAuth';
-import axios from 'axios'
 import { connect } from 'react-redux'
 //component imports
-import HomePage from "./components/HomePage"
-import Saved from './components/Saved';
-import Suggestions from './components/Suggestions'
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Strains from './components/Strains';
+import HomePage from "./Components/HomePage"
+import Saved from './Components/Saved';
+import Suggestions from './Components/Suggestions'
+import Login from './Components/Login';
+import Signup from './Components/Signup';
+import Strains from './Components/Strains';
 import { WeedContext } from './context/WeedContext';
 import { ProductContext } from './context/ProductContext';
 import { UserContext } from './context/UserContext';
-import Home from './components/Home';
+import Home from './Components/Home';
 import PrivateRoute from './utils/PrivateRoute';
 import { logIn } from './actions/actions';
-import UpdateList from './components/UpdateList';
+import UpdateList from './Components/UpdateList';
 //reactstrap styles
 import {Container, 
   Collapse,
@@ -46,6 +44,8 @@ function App(props) {
   const [dummy,setDummy] = useState({
     strain:"Citrus-Punch"
   });
+  
+
 
   const history = useHistory();
 
@@ -137,17 +137,19 @@ const toggle = () => setIsOpen(!isOpen);
     <Container className = "p-0" fluid={true} >
         <Switch>
         <Route exact path= "/">
-            <HomePage />
+            <Home />
           </Route>
-          <PrivateRoute exact path= "/nav" component= {Home} />
+          <PrivateRoute exact path= "/nav-suggestions">
+            <Suggestions addToSavedList={addToSavedList} />
+          </PrivateRoute>
 
           <Route exact path= "/nav-saved">
             <Saved />
           </Route>
 
-          <Route exact path= "/nav-suggestions">
+          {/* <Route exact path= "/nav-suggestions">
             <Suggestions addToSavedList = {addToSavedList} />
-          </Route>
+          </Route> */}
 
           <Route exact path= "/login">
             <Login />

@@ -22,8 +22,9 @@ const Saved = () => {
     return (
         <>
         <NavHeader />
-        <div>
-        <h3 className="ml-auto text-align-center">savedList</h3>
+        <div style={{display:"flex", flexDirection:"column", alignContent:"center"}}>
+        <h1 >Your Saved Strains</h1>
+        <br />
         {savedList.map((weed)  => (
            <div key={weed.id}>
            <h2>{weed.Strain}</h2>
