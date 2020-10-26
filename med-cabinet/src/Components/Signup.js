@@ -78,7 +78,7 @@ const toggle = () => setIsOpen(!isOpen);
           </Navbar>
         </Container>
         <Container className="App p-5">
-          <h2>Sign Up</h2>
+          <h2>Register</h2>
           <Form className="form" onSubmit={handleSubmit} >
             <Col>
               <FormGroup>
