@@ -77,3 +77,4 @@
 [1015/232228.933:ERROR:file_io.cc(135)] WriteFile: There is not enough space on the disk. (0x70)
 [1015/232228.933:ERROR:crash_report_exception_handler.cc(113)] WriteEverything failed
 [1015/232228.937:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\kidle\AppData\Local\Google\Chrome\User Data\Crashpad\reports\8a4d9804-b1fd-4992-8993-b9b6e91c3242.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[1026/021120.501:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
